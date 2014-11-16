@@ -1,0 +1,3 @@
+[submodule "purescript-hatter"]
+	path = purescript-hatter
+	url = https://github.com/mechairoi/purescript-hatter
