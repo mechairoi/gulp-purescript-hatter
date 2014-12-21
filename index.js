@@ -9,7 +9,8 @@ var PluginError = gutil.PluginError;
 var PLUGIN_NAME = 'gulp-purescript-hatter';
 
 module.exports = {
-  compile: function (opt) {
+  compile: function (opts) {
+    opts = opts || {};
     return through.obj(function(file, enc, cb) {
 
       if (file.isNull()) {

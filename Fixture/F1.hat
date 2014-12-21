@@ -2,9 +2,9 @@ render :: String -> String -> VTree
 render x y =
 <div>
   <span><% x %> foo</span>
-  <% y.z %>
+  <% y %>
   &amp;&gt;&lt;
   <textarea><script></script></textarea>
   <hr>
-  <input type="hidden" name=bar value='ba<% y.y %>z' />
+  <input type="hidden" name=bar value='ba<% y %>z' />
 </div>
