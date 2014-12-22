@@ -9,14 +9,14 @@ var gutil = require('gulp-util')
 
 it('should compile', function(cb){
   var stream = hatter.compile({})
-    , fixture = path.join('Fixture', 'F1.hat');
+    , fixture = path.join('fixture', 'Test1.hat');
   ;
 
   stream.on('data', function(file){
     var contents = file.contents.toString();
     assert(/VirtualDOM\.VTree\.Typed\.vtext/.test(contents));
-    assert(/module Fixture.F1/.test(contents));
-    assert.equal(path.join(__dirname, 'Fixture', 'F1.purs'), file.path);
+    assert(/module Test1/.test(contents));
+    assert.equal(path.join(__dirname, 'fixture', 'Test1.purs'), file.path);
     cb();
   });
 
