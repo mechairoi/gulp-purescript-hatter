@@ -1,10 +1,13 @@
+module UnitTest.Text.Hatter.Sample where
+
 render :: String -> String -> VTree
 render x y =
-<div>
-  <span><% x %> foo</span>
-  <% y.z %>
-  &amp;&gt;&lt;
-  <textarea><script></script></textarea>
-  <hr>
-  <input type="hidden" name=bar value='ba<% y.y %>z' />
-</div>
+  <div>
+    <span><% x %> foo</span>
+    <% y.z %>
+    &amp;&gt;&lt;
+    <textarea><script></script></textarea>
+    <hr>
+    <input type="hidden" name=bar value='ba<% y.y %>z' />
+  </div>
+

@@ -28,7 +28,7 @@ module.exports = {
         var moduleName =
           gutil.replaceExtension(file.relative, "").split(path.sep).join(".");
         file.contents = new Buffer(
-          hatter(moduleName)([])(String(file.contents)).value0
+           hatter(moduleName)(String(file.contents)).value0
         );
       } catch (e) {
         return cb(new PluginError(PLUGIN_NAME, e.message || e.msg, {
