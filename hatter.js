@@ -2261,7 +2261,7 @@ var PS = { };
   };
   var translateNode = function (_0) {
       if (_0 instanceof Text_Hatter_Parser.ElementNode) {
-          return new Text_Hatter_PureScript.AppE(new Text_Hatter_PureScript.AppE(new Text_Hatter_PureScript.AppE(new Text_Hatter_PureScript.VarE("C.element"), new Text_Hatter_PureScript.AppE(new Text_Hatter_PureScript.VarE("C.tagName"), new Text_Hatter_PureScript.StringLitE(_0.value0))), Text_Hatter_PureScript.ArrayLitE.create(Prelude.map(Prelude.functorArray)(translateAttribute)(_0.value1))), new Text_Hatter_PureScript.AppE(new Text_Hatter_PureScript.VarE("Contro.Bind.join"), Text_Hatter_PureScript.ArrayLitE.create(Prelude.map(Prelude.functorArray)(translateNodes)(_0.value2))));
+          return new Text_Hatter_PureScript.AppE(new Text_Hatter_PureScript.AppE(new Text_Hatter_PureScript.AppE(new Text_Hatter_PureScript.VarE("C.element"), new Text_Hatter_PureScript.AppE(new Text_Hatter_PureScript.VarE("C.tagName"), new Text_Hatter_PureScript.StringLitE(_0.value0))), Text_Hatter_PureScript.ArrayLitE.create(Prelude.map(Prelude.functorArray)(translateAttribute)(_0.value1))), new Text_Hatter_PureScript.AppE(new Text_Hatter_PureScript.VarE("Control.Bind.join"), Text_Hatter_PureScript.ArrayLitE.create(Prelude.map(Prelude.functorArray)(translateNodes)(_0.value2))));
       };
       if (_0 instanceof Text_Hatter_Parser.TextNode) {
           return Text_Hatter_PureScript.AppE.create(new Text_Hatter_PureScript.VarE("H.text"))(new Text_Hatter_PureScript.StringLitE(_0.value0));
