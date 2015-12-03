@@ -2236,17 +2236,17 @@ var PS = { };
       if (_3 instanceof Text_Hatter_Parser.StringExp) {
           return Text_Hatter_PureScript.AppE.create(new Text_Hatter_PureScript.VarE("UC.coerceToString"))(new Text_Hatter_PureScript.RawE(_3.value0));
       };
-      throw new Error("Failed pattern match at Text.Hatter.Translator line 69, column 1 - line 70, column 1: " + [ _3.constructor.name ]);
+      throw new Error("Failed pattern match at Text.Hatter.Translator line 65, column 1 - line 66, column 1: " + [ _3.constructor.name ]);
   };
   var translateHStrings = function (xs) {
       return new Text_Hatter_PureScript.AppE(new Text_Hatter_PureScript.AppE(new Text_Hatter_PureScript.VarE("Data.String.joinWith"), new Text_Hatter_PureScript.StringLitE("")), Text_Hatter_PureScript.ArrayLitE.create(Prelude.map(Prelude.functorArray)(translateHString)(xs)));
   };
   var translateAttribute = function (_2) {
       if (_2 instanceof Text_Hatter_Parser.Attr) {
-          return new Text_Hatter_PureScript.AppE(new Text_Hatter_PureScript.AppE(new Text_Hatter_PureScript.AppE(new Text_Hatter_PureScript.VarE("C.prop"), new Text_Hatter_PureScript.AppE(new Text_Hatter_PureScript.VarE("C.propName"), translateHStrings(_2.value0))), new Text_Hatter_PureScript.AppE(new Text_Hatter_PureScript.VarE("C.attrName"), translateHStrings(_2.value0))), translateHStrings(_2.value1));
+          return new Text_Hatter_PureScript.AppE(new Text_Hatter_PureScript.AppE(new Text_Hatter_PureScript.VarE("C.prop"), translateHStrings(_2.value0)), translateHStrings(_2.value1));
       };
       if (_2 instanceof Text_Hatter_Parser.Toggle) {
-          return new Text_Hatter_PureScript.AppE(new Text_Hatter_PureScript.AppE(new Text_Hatter_PureScript.AppE(new Text_Hatter_PureScript.VarE("C.prop"), new Text_Hatter_PureScript.AppE(new Text_Hatter_PureScript.VarE("C.propName"), translateHStrings(_2.value0))), new Text_Hatter_PureScript.AppE(new Text_Hatter_PureScript.VarE("C.attrName"), translateHStrings(_2.value0))), new Text_Hatter_PureScript.VarE("true"));
+          return new Text_Hatter_PureScript.AppE(new Text_Hatter_PureScript.AppE(new Text_Hatter_PureScript.VarE("C.prop"), translateHStrings(_2.value0)), new Text_Hatter_PureScript.VarE("true"));
       };
       if (_2 instanceof Text_Hatter_Parser.AttributesExp) {
           return new Text_Hatter_PureScript.AppE(new Text_Hatter_PureScript.VarE("UC.coerceToProperty"), new Text_Hatter_PureScript.RawE(_2.value0));
