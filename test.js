@@ -14,8 +14,9 @@ it('should compile', function(cb){
 
   stream.on('data', function(file){
     var contents = file.contents.toString();
-    assert(/VirtualDOM\.VTree\.Typed\.vtext/.test(contents));
+    assert(/H\.text/.test(contents));
     //assert(/module Fixture.F1/.test(contents));
+    console.log(contents);
     assert.equal(path.join(__dirname, 'Fixture', 'F1.purs'), file.path);
     cb();
   });

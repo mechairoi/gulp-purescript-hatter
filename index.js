@@ -24,6 +24,7 @@ module.exports = {
       }
 
       try {
+        file.path = gutil.replaceExtension(file.path, ".purs");
         file.contents = new Buffer(
            hatter([])(String(file.contents)).value0
         );
